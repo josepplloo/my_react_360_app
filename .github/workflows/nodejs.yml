@@ -38,6 +38,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm install -g react-360-cli    
       - run: npm i
       - run: npm run build --if-present
       - run: npm run clean-bundle
